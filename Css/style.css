@@ -3,7 +3,6 @@
   --blanco: #ffffff;
   --negro: #000000;
   --morado-oscuro: #2a0e30;
-  --gris: #ADADADFF;
 }
 
 * {
@@ -379,4 +378,91 @@ body:has(#modo:checked) {
     transparent 1px
   );
   background-size: 24px 24px;
+}
+
+/* 📱 Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+
+  header.header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  header ul {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  header ul li {
+    margin: 10px 0;
+  }
+
+  nav {
+    position: static;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 0;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  section {
+    margin: 15px;
+  }
+
+  .encabezado {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .encabezado img {
+    margin: 0;
+    width: 120px;
+    height: 150px;
+  }
+
+  .encabezado-texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .encabezado-texto p {
+    font-size: 1rem;
+  }
+
+  .Lenguajes.columnas {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .Lenguajes .info-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cursos img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  footer p, footer a {
+    font-size: 0.7rem;
+  }
 }
